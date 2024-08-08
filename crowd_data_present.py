@@ -16,6 +16,10 @@ with open('processed_data/crowd_data.csv', 'r') as file:
 	reader = csv.reader(file, delimiter=',')
 	next(reader)
 	for row in reader:
+		if len(row) < 5:
+            		# Saltar filas incompletas
+            		print(f"Fila incompleta o inválida encontrada: {row}")
+            		continue
 		human_count.append(int(row[1]))
 		violate_count.append(int(row[2]))
 		restricted_entry.append(bool(int(row[3])))
