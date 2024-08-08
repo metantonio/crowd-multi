@@ -4,7 +4,7 @@ import datetime
 VIDEO_CONFIG = {
 	"VIDEO_CAP" : "video/test.mp4",
 	"IS_CAM" : False,
-	"CAM_APPROX_FPS": 7,
+	"CAM_APPROX_FPS": 30,
 	"HIGH_CAM": False,
 	"START_TIME": datetime.datetime(2024, 8, 8, 0, 0, 0, 0)
 }
@@ -21,7 +21,7 @@ SHOW_DETECT = True
 # Data record
 DATA_RECORD = True
 # Data record rate (data record per frame)
-DATA_RECORD_RATE = 30
+DATA_RECORD_RATE = 24
 # Check for restricted entry
 RE_CHECK = False
 # Restricted entry time (H:M:S)
@@ -44,10 +44,10 @@ ABNORMAL_ENERGY = 1866
 # Abnormal activity ratio threhold
 ABNORMAL_THRESH = 0.66
 # Threshold for human detection minumun confindence
-MIN_CONF = 0.3
+MIN_CONF = 0.1
 # Threshold for Non-maxima surpression
-NMS_THRESH = 0.2
+NMS_THRESH = 0.4
 # Resize frame for processing
-FRAME_SIZE = 1080
+FRAME_SIZE = 512
 # Tracker max missing age before removing (seconds)
 TRACK_MAX_AGE = 3
